@@ -81,6 +81,11 @@ pre code {
 	z-index: 1;
 }
 
+.slide div {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
 .slide ul {
 	list-style-type: disc;
 }
