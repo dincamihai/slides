@@ -4,17 +4,121 @@
 	to the MIT License at: http://www.opensource.org/licenses/mit-license.php.
 */
 
-@import "../reset.css";
+@import "basic.css";
 
-html {
-	height: 100%;
-	overflow-y: auto;
+@font-face {
+    font-family: 'Glametrix';
+    src: url('/fonts/Glametrix.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-body {
-	font-size: 100%;
-	color: #222;
+@font-face {
+    font-family:"Great Vibes";
+    src:
+        url("/fonts/GreatVibes-Regular.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
 }
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+    font-family:"Aka Dora";
+    src:
+        url("/fonts/akaDora.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"Minya";
+    src:
+        url("/fonts/minya_nouvelle_rg.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"Caneletter";
+    src:
+        url("/fonts/CaneletterScript.otf") format("opentype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"SpaceRace";
+    src:
+        url("/fonts/space_race.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"duality";
+    src:
+        url("/fonts/duality.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"Life Savers";
+    src:
+        url("/fonts/LifeSavers-Regular.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"Oregano";
+    font-family:"custom";
+    src:
+        url("/fonts/Oregano-Regular.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"hollyberry";
+    src:
+        url("/fonts/hollyberry.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"university";
+    src:
+        url("/fonts/UNIVERSI.TTF") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"desereted";
+    src:
+        url("/fonts/Desereted.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"univrsty";
+    src:
+        url("/fonts/UnivrstyRoman-BT-Regular.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"italo-light";
+    src:
+        url("/fonts/ITALO_light.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
 
 footer {
 	min-width: 40em;
@@ -24,108 +128,139 @@ footer {
 	text-align: center;
 }
 
-footer p {
-	color: #ccc;
-}
-
-em {
-	font-style: normal;
-	color: #888;
-}
-
-pre code {
-    background-color: transparent;
-}
-
-.slide h1, .slide h2, .slide h3, .slide h4, .slide h5 {
-	font-weight: bold;
-	margin: .25em 0;
-}
-
-.slide h1 {
-	font-size: 3em;
-	margin-top: 0;
-}
-
-.slide h2 {
-	font-size: 1.5em;
-	color: #666;
-}
-
-.slide p {
-	line-height: 1.25em;
-}
-
-.slide-view-module {
-	position: relative;
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	min-width: 40em;
-	min-height: 20em;
-	padding: 0;
-	margin: 0;
-}
-
 .slide {
-	font-size: 200%;
-	top: 0;
-	left: 10%;
-	width: 80%;
-	min-height: 5em;
-	margin: 0 auto;
+    box-shadow:
+        0em 0.1em 0.2em 0.03em #666666;
+    left: 30%;
+    width: 40%;
 }
 
-.slide-current {
-	opacity: 1;
-	z-index: 1;
+.envelope-texture {
+    background: url('../envelope-texture.png');
 }
 
-.slide div {
-    max-width: 800px;
-    margin: 20px auto;
+.envelope {
+    padding-top: 2em;
 }
 
-.slide ul {
-	list-style-type: disc;
+#envelope-full {
+    padding-bottom: 2em;
 }
 
-.slide li {
-	margin-bottom: .25em;
+.band {
+    background: url('../band.png') no-repeat;
+    position: relative;
+    top: -24em;
+    z-index: 3;
+    height: 100%;
 }
 
-.no-touch .slide-touch {
-	display: none;
+.half-circle {
+    width: 3em;
+    height: 1.5em;
+    position: relative;
+    border-radius: 50% / 90%;
 }
 
-.touch .slide-no-touch {
-	display: none;
+.half-circle-top {
+    top: -1.5em;
+    margin-bottom: -1em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow:
+        0em 0.1em 0.1em 0.01em #555555;
 }
 
-@media screen and (max-device-width: 480px) {
-/*	body {
-		height: auto;
-	}*/
-	.slide {
-		height: auto;
-		font-size: 100%;
-		min-height: auto;
-	}
-	
-	.slide-view-module {
-		min-width: 0;
-		min-height: 0;
-	}
-	
-	footer {
-		margin-top: 2em;
-		min-width: 0;
-		font-size: .75em;
-	}
+.half-circle-bottom {
+    top: 1em;
+    margin-bottom: -1em;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow:
+        0em -0.1em 0.1em 0.01em #555555;
 }
 
-@media screen and (max-device-width: 480px) and (orientation: landscape) {
-	footer {
-		font-size: .4em;
-	}
+.card {
+    box-shadow:
+        0em 0em 0.1em 0.05em #555555;
+    margin: 0 .8em 0 .8em;
+    background-color: #f8f3f9;
+    -webkit-transform: rotate(.3deg);
+    -moz-transform: rotate(.3deg);
+    -o-transform: rotate(.3deg);
+    -ms-transform: rotate(.3deg);
+    transform: rotate(.3deg);
+    z-index: 1;
+}
+
+#card-half {
+    border-radius: 1em 1em 0 0;
+    padding: 1px 0 0 0;
+}
+
+#card-full {
+    border-radius: 1em 1em 1em 1em;
+    padding: 1px 0 1em 0;
+}
+
+.card-inner {
+    position: relative;
+    margin: 1em 1em 0 1em;
+    border-radius: 1em 1em 0 0;
+    background-color: white;
+    font-family: "custom";
+    padding-bottom: .3em;
+}
+
+#card-inner-full {
+    border-radius: 1em 1em 1em 1em;
+}
+
+#white-rectangle {
+    padding: 0 0 .5em 0;
+    border-radius: 1em 1em 1em 1em;
+}
+
+#envelope-upper-flap {
+    min-height: 18em;
+    position: relative;
+    box-shadow:
+        0px 0.1em 0.1em 0px #555555,
+        0px 0.3em 0.8em -0.5em #cccccc inset;
+}
+
+.envelope-lower-flap {
+    min-height: 11em;
+    box-shadow:
+        0px -0.1em 0.1em 0px #555555,
+        0px 0.3em 0.8em -0.5em #cccccc inset;
+    z-index: 2;
+}
+
+#envelope-lower-flap-closed {
+    min-height: 7em;
+    position: relative;
+    z-index: -1;
+    box-shadow: none;
+}
+
+@media all and (min-width: 800px)  {
+    .align-right {
+        text-align: right;
+    }
+
+    .align-left {
+        text-align: left;
+    }
+}
+
+@media all and (min-width: 50px)   {  body  { font-size:0.1em;  } }
+@media all and (min-width: 100px)  {  body  { font-size:0.2em;  } }
+@media all and (min-width: 200px)  {  body  { font-size:0.4em;  } }
+@media all and (min-width: 300px)  {  body  { font-size:0.5em;  } }
+@media all and (min-width: 400px)  {  body  { font-size:0.6em;  } }
+@media all and (min-width: 500px)  {  body  { font-size:0.7em;  } }
+
+body {
+    color: #444;
 }
