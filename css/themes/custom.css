@@ -137,6 +137,8 @@ footer {
     margin-right: auto;
     overflow: hidden;
     max-height: 26em;
+    position: relative;
+    top: 2em;
 }
 
 .envelope-texture {
@@ -155,10 +157,10 @@ footer {
     background: url('../band.png') no-repeat;
     background-size: auto 100%;
     position: relative;
-    top: -30em;
+    top: -26em;
     left: 18em;
     z-index: 3;
-    height: 30.2em;
+    height: 26.1em;
 }
 
 .half-circle {
